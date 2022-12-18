@@ -1,6 +1,9 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import router from './router/endpoints.js';
+
 const app = express();
+dotenv.config();
 
 const PORT = process.env.PORT || 3001;
 

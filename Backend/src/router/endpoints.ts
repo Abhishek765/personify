@@ -1,4 +1,5 @@
 import express from 'express';
+import { chats } from '../data/data.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -7,13 +8,11 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/hello', (req, res) => {
-  res.json({
-    message: 'Hello How are you!!!'
-  });
+router.get('/api/chats', (req, res) => {
+  res.send(chats);
 });
 
-router.get('/hello/:id', (req, res) => {
+router.get('/api/chats/:id', (req, res) => {
   res.json({
     message: `Hello From /hello with id: ${req.params.id}`
   });
