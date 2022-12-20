@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "start": "yarn tsc | node dist/server.js",
+    "start": "yarn tsc && node dist/server.js",
     "dev": "concurrently \"tsc --watch\" \"nodemon dist/server.js\"",
     "build": "tsc"
   },
